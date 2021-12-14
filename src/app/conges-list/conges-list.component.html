@@ -1,0 +1,47 @@
+
+
+
+<div class="">
+  <div class="mat-elevation-z8">
+  
+    <table>
+      <thead>     
+        <tr class="thead-dark">
+     
+          <th scope="col" class="dt-center highlighted">Debut </th>
+          <th scope="col" class="dt-center highlighted">Fin </th>
+          <th scope="col" class="dt-center highlighted">Employé </th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+        *ngFor = "let conge of conges"
+        >
+       
+          <td data-label="date debut :" class="dt-center">
+          {{conge.datedebut}}
+          </td>
+
+          <td data-label="date fin :" class="dt-center">
+           {{conge.datefin}}
+          </td>
+          <td data-label="employée :" class="dt-center">
+            {{conge.employee}}
+           </td>
+          <td>
+            <button (click)="updateConges(conge.id)" class="btn btn-info">Update</button>
+            <button (click)="deleteConges(conge.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            <button (click)="detailsConges(conge.id)" class="btn btn-warning" style="margin-left: 10px;">View</button>
+        </td>
+        </tr>
+      </tbody>
+     
+    </table>
+   
+
+  </div>
+
+
+  
+</div>

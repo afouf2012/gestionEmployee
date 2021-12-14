@@ -1,0 +1,20 @@
+<div class="col-md-8 offset-md-3">
+    <h3>Create Congé</h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label>Date Début</label>
+            <input type="date" class="form-control" [(ngModel)] = "conges.datedebut" name = "dateDebut">
+        </div>
+        <div class="form-group">
+            <label>Date Fin</label>
+            <input type="date" class="form-control" [(ngModel)] = "conges.datefin" name = "dateFin">
+        </div>
+        <div class="form-group">
+
+            <label>Employee </label>
+            <input type="text" class="form-control" [(ngModel)] = "conges.employee" name = "employee">
+        </div>
+        <h1> employe {{conges.employee}}</h1>
+        <button class="btn btn-success" type="submit">Add</button>
+    </form>
+    </div> 
